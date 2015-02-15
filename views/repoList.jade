@@ -1,0 +1,15 @@
+extends layout.jade
+
+block content
+	div.row
+		div.eight.columns
+			| Repo name
+		div.four.columns
+			| Most recently updated at:
+	each item in repos
+		div.row
+			div.eight.columns               
+				a(href='/view/repo/' + item.id)
+					= item.name
+			div.four.columns
+				= item.updated_at   

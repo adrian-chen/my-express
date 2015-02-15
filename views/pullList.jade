@@ -1,0 +1,8 @@
+extends layout.jade
+
+block content
+	each pull in accounts
+		div.row
+			div.eight.columns               
+				a(href='/view/pull/' + pull.id)
+					= pull.title
